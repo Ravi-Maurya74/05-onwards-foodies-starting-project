@@ -26,7 +26,11 @@ export default function ImagePicker({ label, name }) {
       <div className={classes.controls}>
         <div className={classes.preview}>
           {pickedImage && (
-            <Image src={pickedImage} alt="The Image selected by the user." fill />
+            <Image
+              src={pickedImage}
+              alt="The Image selected by the user."
+              fill
+            />
           )}
           {!pickedImage && <p>No image picked yet.</p>}
         </div>
@@ -38,6 +42,7 @@ export default function ImagePicker({ label, name }) {
           name={name}
           ref={imageInputRef}
           onChange={handleImageChange}
+          required
         />
         <button
           className={classes.button}
